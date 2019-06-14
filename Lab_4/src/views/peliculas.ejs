@@ -1,0 +1,52 @@
+<% include partials/_header %>
+
+<div class="container">
+	<div class="row mt-5">
+		<div class="col-md-7">
+			<table class="table table-bordered table-hover">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>MOVIE</th>
+						<th>GENDER</th>
+						<th>ACTION</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% if(data){ %>
+						<% for(var i = 0; i < data.length; i++) { %>
+							<tr>
+								<td><%= (i + 1) %></td>
+								<td><%= data[i].Nombre %></td>
+								<td><%= data[i].Genero %></td>
+								<td>
+									<a href="/delete/<%= data[i].ID_Peli %>" class="btn btn-danger">DELETE</a>
+									<a href="/update/<%= data[i].ID_Peli %>" class="btn btn-info">UPDATE</a>
+								</td>
+							</tr>
+						<% } %>
+					<% } %>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-mod-5">
+			<div class="card">
+				<div class="card-body">
+					<form action="/add" method="post">
+						<div class="from-group">
+							<input type="text" name="Nombre" value="" placeholder="Name" class="from-control">
+						</div>
+						<div class="from-group">
+							<input type="text" name="Genero" value="" placeholder="Gender" class="from-control">
+						</div>
+						<button type="submit" class="btn btn-primary">
+							SAVE PELICULA
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<% include partials/_footer %>
