@@ -33,3 +33,9 @@ Pasos
 Paginas de Apoyo
       https://www.youtube.com/watch?v=VxRXlUrV6y0&list=LLIwE38NTHVcYsMqFha-4AMQ&index=4&t=0s    
       https://medium.com/@nishankjaintdk/setting-up-a-node-js-app-on-a-linux-ami-on-an-aws-ec2-instance-with-nginx-59cbc1bcc68c
+
+
+Instancias 
+    http://ec2-34-229-223-86.compute-1.amazonaws.com:3000/
+LoadBalancer
+    http://lab4lb-480065563.us-east-1.elb.amazonaws.com:3000/
